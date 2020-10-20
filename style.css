@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: rgb(216, 255, 242);
+  background-color: rgb(184, 128, 184);
 }
 
 .main-game {
@@ -11,7 +11,7 @@ body {
   align-items: center;
 }
 
-.genesis {
+.genius {
   display: grid;
   grid-template-areas:
     "verde vermelho"
@@ -20,8 +20,8 @@ body {
   border: 1px solid #ffffff;
   background-color: #ffffff;
   border-radius: 100%;
-  width: 700px;
-  height: 700px;
+  width: 600px;
+  height: 600px;
 }
 
 .blue {

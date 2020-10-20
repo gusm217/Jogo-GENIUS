@@ -29,7 +29,7 @@ let lightColor = (element, number) => {
     number = number * 500;
     setTimeout(() => {
         element.classList.add('selected');
-    }, number - 250);
+    }, number);
     setTimeout(() => {
         element.classList.remove('selected');
     });
@@ -38,7 +38,7 @@ let lightColor = (element, number) => {
 //checa se os botões clicados são o mesmos da ordem gerada
 let checkOrder = () => {
     for(let i in clickedOrder) {
-        if(clickedOrder(i) != order(i)){
+        if(clickedOrder[i] != order[i]) {
             gameOver();
             break;
         }
@@ -51,13 +51,14 @@ let checkOrder = () => {
 
 //função para o clique do usuário
 let click = (color) => {
-    clickedOrder(clickedOrder.length) = color;
+    clickedOrder[clickedOrder.length] = color;
     createColorElement(color).classList.add('selected');
 
-    setTimeout(() =>{
+    setInterval(() => {
         createColorElement(color).classList.remove('selected');
         checkOrder();
-    },250);
+    }, 500);
+        
  
 }
 
