@@ -104,5 +104,12 @@ red.onclick = () => click(1);
 yellow.onclick = () => click(2);
 blue.onclick = () => click(3);
 
+function onClickHandler(){
+    let newColors = document.getElementById("box").value;
+        if("box".checked){
+            changeColors();
+        }
+}
+
 //inicio do jogo
 playGame();
